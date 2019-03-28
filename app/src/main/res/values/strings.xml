@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">The Dicer</string>
+    <string name="diceImage">Dice</string>
+    <string name="todo">TODO</string>
+</resources>
