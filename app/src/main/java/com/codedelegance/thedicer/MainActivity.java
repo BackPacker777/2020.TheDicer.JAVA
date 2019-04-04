@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
         dieQTYValue.setText(dieQty.getProgress() + "/" + dieQty.getMax());
         dieType.check(R.id.d4);
+        dieTypeValue = 4;
 
         dieQty.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             final int MIN = 1;
@@ -80,19 +81,21 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 int dieQtyValue = dieQty.getProgress();
+                int[] dieRolls;
+                int totalRoll = 0;
 
-                ProcessRoll dieRoll;
-                dieRoll = new ProcessRoll(dieQtyValue, dieTypeValue);
+                dieRolls = ProcessRoll.performRolls(dieQtyValue, dieTypeValue);
 
-                totalResults.setText(Integer.toString(dieRoll.getResult()));
+                for (int roll : dieRolls) {
+                    totalResults.setText(Integer.toString(totalRoll += roll));
+                }
 
-                int[] rolls = dieRoll.getRolls();
                 String rollText = "";
-                for (int i = 0; i < rolls.length; i++) {
-                    if (i == rolls.length - 1) {
-                        rollText = rollText + rolls[i];
+                for (int i = 0; i < dieRolls.length; i++) {
+                    if (i == dieRolls.length - 1) {
+                        rollText = rollText + dieRolls[i];
                     } else {
-                        rollText = rollText + rolls[i] + ", ";
+                        rollText = rollText + dieRolls[i] + ", ";
                     }
                 }
                 rollsResult.setText(rollText);
