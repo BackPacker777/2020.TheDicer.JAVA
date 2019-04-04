@@ -102,27 +102,4 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
-/*    public void handleRollButton(View view) {
-        int dieQtyValue = Integer.parseInt(dieQTYValue.getText().toString());
-        Toast.makeText(this, dieQtyValue, Toast.LENGTH_SHORT).show();
-
-        ProcessRoll dieRoll;
-        dieRoll = new ProcessRoll(dieQtyValue, dieTypeValue);
-
-        totalResults.setText(Integer.toString(dieRoll.getResult()));
-        Toast.makeText(this, Integer.toString(dieRoll.getResult()), Toast.LENGTH_SHORT).show();
-
-        int[] rolls = dieRoll.getRolls();
-        String rollText = "";
-        for (int i = 0; i < rolls.length; i++) {
-            if (i == rolls.length - 1) {
-                rollText = rollText + rolls[i];
-            } else {
-                rollText = rollText + rolls[i] + ", ";
-            }
-        }
-        rollsResult.setText(rollText);
-        Toast.makeText(this, rollText, Toast.LENGTH_SHORT).show();
-    }*/
 }

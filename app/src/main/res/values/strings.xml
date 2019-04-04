@@ -2,7 +2,7 @@
     <string name="app_name">The Dicer</string>
     <string name="diceImage">Dice</string>
     <string name="the_dicer">The Dicer</string>
-    <string name="rollButton">!  R O L L  !</string>
+    <string name="rollButton">R O L L</string>
     <string name="total_result">Total Result</string>
     <string name="rolls">Rolls</string>
     <string name="die_qty">Die QTY:</string>
@@ -15,4 +15,5 @@
     <string name="d20">d20</string>
     <string name="d100">d100</string>
     <string name="die_type">Die Type</string>
+    <string name="title_activity_main2">Main2Activity</string>
 </resources>
