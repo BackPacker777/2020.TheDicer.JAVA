@@ -1,54 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--<android.support.constraint.ConstraintLayout
+<android.support.constraint.ConstraintLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".MainActivity" tools:layout_editor_absoluteY="25dp" android:visibility="visible"
-        android:id="@+id/DOM">-->
+        android:id="@+id/DOM">
 
-<RelativeLayout
+    <!--<RelativeLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="8dp" android:id="@+id/rollerAppLayout">
+        android:padding="8dp" android:id="@+id/rollerAppLayout">-->
 
     <ImageView
-            android:layout_width="388dp"
+            android:layout_width="400dp"
             android:layout_centerHorizontal="true"
-            android:layout_height="124dp" app:srcCompat="@mipmap/dices" android:id="@+id/logoImage"
-            android:layout_marginTop="5dp" android:contentDescription="@string/diceImage"
-    />
+            android:layout_height="132dp" app:srcCompat="@mipmap/dices" android:id="@+id/logoImage"
+            android:contentDescription="@string/diceImage"
+            android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toTopOf="parent"/>
 
     <TextView
             android:layout_width="395dp"
             android:layout_height="83dp" android:id="@+id/rollsResultsText" android:textStyle="bold"
-            android:textAlignment="center" android:layout_marginTop="130dp" android:textSize="36sp"
+            android:textAlignment="center" android:textSize="36sp"
             android:background="#C3C0C0"
-    />
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/logoImage" android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="parent"/>
 
     <TextView
             android:text="@string/rolls"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" android:id="@+id/rollsLabel" android:layout_marginTop="214dp"
+            android:layout_height="wrap_content" android:id="@+id/rollsLabel"
             android:textSize="24sp" android:textStyle="bold" android:textAlignment="center"
-    />
+            app:layout_constraintTop_toBottomOf="@+id/rollsResultsText" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" app:layout_constraintHorizontal_bias="0.0"/>
 
     <TextView
             android:layout_height="wrap_content" android:id="@+id/totalResultsText" android:textStyle="bold"
-            android:textAlignment="center" android:layout_marginTop="280dp" android:textSize="36sp"
-            android:layout_width="120dp" android:layout_marginStart="135dp" android:background="#C3C0C0"
-    />
+            android:textAlignment="center" android:textSize="36sp"
+            android:layout_width="120dp" android:background="#C3C0C0"
+            android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="68dp"
+            app:layout_constraintTop_toBottomOf="@+id/rollsLabel" app:layout_constraintHorizontal_bias="0.498"/>
 
     <TextView
             android:text="@string/total_result"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" android:id="@+id/totalResultsLabel" android:layout_marginTop="330dp"
+            android:layout_height="wrap_content" android:id="@+id/totalResultsLabel"
             android:textSize="24sp" android:textStyle="bold" android:textAlignment="center"
-    />
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" app:layout_constraintTop_toBottomOf="@+id/totalResultsText"
+            android:layout_marginBottom="8dp" app:layout_constraintBottom_toTopOf="@+id/dieQtySeekBar"
+            app:layout_constraintHorizontal_bias="0.0" app:layout_constraintVertical_bias="0.0"/>
 
     <SeekBar
             style="@style/Widget.AppCompat.SeekBar.Discrete"
@@ -57,31 +71,36 @@
             android:max="10"
             android:progress="1"
             android:id="@+id/dieQtySeekBar"
-            android:layout_marginTop="400dp"
             android:thumb="@mipmap/d20"
-    />
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            android:layout_marginTop="65dp" app:layout_constraintTop_toBottomOf="@+id/totalResultsText"/>
 
     <TextView
             android:text="@string/die_qty"
             android:layout_width="80dp"
-            android:layout_height="wrap_content" android:id="@+id/dieQTYLabel" android:layout_marginTop="450dp"
+            android:layout_height="wrap_content" android:id="@+id/dieQTYLabel"
             android:textSize="18sp" android:textStyle="bold" android:textAlignment="center"
-            android:layout_marginStart="110dp"
-    />
+            android:layout_marginStart="120dp"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/dieQtySeekBar"/>
 
     <TextView
             android:layout_width="80dp"
-            android:layout_height="wrap_content" android:id="@+id/dieQTYValue" android:layout_marginTop="450dp"
+            android:layout_height="wrap_content" android:id="@+id/dieQTYValue"
             android:textSize="18sp" android:textStyle="bold" android:textAlignment="textStart"
-            android:layout_marginStart="190dp"
-    />
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@+id/dieQTYLabel"
+            android:layout_marginStart="8dp" app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintTop_toBottomOf="@+id/dieQtySeekBar"/>
 
     <RadioGroup
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:id="@+id/dieTypeRadioGroup"
-            android:layout_marginTop="500dp">
+            android:layout_marginBottom="18dp" app:layout_constraintBottom_toTopOf="@+id/rollButton"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp">
 
         <RadioButton
                 android:text="@string/d2"
@@ -177,8 +196,18 @@
     <Button
             android:text="@string/rollButton"
             android:layout_width="399dp"
-            android:layout_height="101dp" android:id="@+id/rollButton" android:layout_marginTop="590dp"
-            android:textSize="36sp" android:textStyle="bold" android:textColor="#010CB1"
-            android:fontFamily="@font/uncial_antiqua"/>
+            android:layout_height="101dp" android:id="@+id/rollButton"
+            android:textSize="50sp" android:textStyle="bold" android:textColor="#010CB1"
+            android:fontFamily="@font/uncial_antiqua" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp"/>
+    <android.support.constraint.Guideline android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                          android:id="@+id/guideline" app:layout_constraintGuide_begin="20dp"
+                                          android:orientation="vertical"/>
+    <android.support.constraint.Guideline android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                          android:id="@+id/guideline2" app:layout_constraintGuide_begin="20dp"
+                                          android:orientation="horizontal"/>
 
-</RelativeLayout>
+    <!--</RelativeLayout>-->
+</android.support.constraint.ConstraintLayout>
