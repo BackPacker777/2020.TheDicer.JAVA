@@ -8,21 +8,13 @@
         tools:context=".MainActivity" tools:layout_editor_absoluteY="25dp" android:visibility="visible"
         android:id="@+id/DOM">
 
-    <!--<RelativeLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="8dp" android:id="@+id/rollerAppLayout">-->
-
     <ImageView
-            android:layout_width="400dp"
+            android:layout_width="339dp"
             android:layout_centerHorizontal="true"
-            android:layout_height="132dp" app:srcCompat="@mipmap/dices" android:id="@+id/logoImage"
+            android:layout_height="77dp" app:srcCompat="@mipmap/dices" android:id="@+id/logoImage"
             android:contentDescription="@string/diceImage"
             android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginStart="8dp"
-            app:layout_constraintStart_toStartOf="parent" android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginTop="36dp"
             app:layout_constraintTop_toTopOf="parent"/>
 
     <TextView
@@ -50,7 +42,7 @@
             android:layout_width="120dp" android:background="#C3C0C0"
             android:layout_marginStart="8dp"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginEnd="8dp"
-            app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="68dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="20dp"
             app:layout_constraintTop_toBottomOf="@+id/rollsLabel" app:layout_constraintHorizontal_bias="0.498"/>
 
     <TextView
@@ -100,7 +92,8 @@
             android:id="@+id/dieTypeRadioGroup"
             android:layout_marginBottom="18dp" app:layout_constraintBottom_toTopOf="@+id/rollButton"
             app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
-            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp">
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/dieQTYLabel">
 
         <RadioButton
                 android:text="@string/d2"
@@ -198,10 +191,10 @@
             android:layout_width="399dp"
             android:layout_height="101dp" android:id="@+id/rollButton"
             android:textSize="50sp" android:textStyle="bold" android:textColor="#010CB1"
-            android:fontFamily="@font/uncial_antiqua" android:layout_marginBottom="8dp"
+            android:fontFamily="@font/uncial_antiqua" android:layout_marginBottom="68dp"
             app:layout_constraintBottom_toBottomOf="parent" android:layout_marginEnd="8dp"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="8dp"/>
+            android:layout_marginStart="8dp" app:layout_constraintHorizontal_bias="1.0"/>
     <android.support.constraint.Guideline android:layout_width="wrap_content" android:layout_height="wrap_content"
                                           android:id="@+id/guideline" app:layout_constraintGuide_begin="20dp"
                                           android:orientation="vertical"/>
@@ -209,5 +202,4 @@
                                           android:id="@+id/guideline2" app:layout_constraintGuide_begin="20dp"
                                           android:orientation="horizontal"/>
 
-    <!--</RelativeLayout>-->
 </android.support.constraint.ConstraintLayout>
