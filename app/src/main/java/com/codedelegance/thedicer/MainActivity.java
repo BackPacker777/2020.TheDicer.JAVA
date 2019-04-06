@@ -57,21 +57,28 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(RadioGroup dieQty, int checkedId) {
                 if (checkedId == R.id.d2) {
+                    Toast.makeText(getApplicationContext(), "D2", Toast.LENGTH_LONG).show();
                     dieTypeValue = 2;
                 } else if (checkedId == R.id.d4) {
+                    Toast.makeText(getApplicationContext(), "D4", Toast.LENGTH_LONG).show();
                     dieTypeValue = 4;
                 } else if (checkedId == R.id.d6) {
+                    Toast.makeText(getApplicationContext(), "D6", Toast.LENGTH_LONG).show();
                     dieTypeValue = 6;
                 } else if (checkedId == R.id.d8) {
+                    Toast.makeText(getApplicationContext(), "D8", Toast.LENGTH_LONG).show();
                     dieTypeValue = 8;
                 } else if (checkedId == R.id.d10) {
+                    Toast.makeText(getApplicationContext(), "D10", Toast.LENGTH_LONG).show();
                     dieTypeValue = 10;
                 } else if (checkedId == R.id.d12) {
+                    Toast.makeText(getApplicationContext(), "D12", Toast.LENGTH_LONG).show();
                     dieTypeValue = 12;
                 } else if (checkedId == R.id.d20) {
                     Toast.makeText(getApplicationContext(), "D20", Toast.LENGTH_LONG).show();
                     dieTypeValue = 20;
                 } else {
+                    Toast.makeText(getApplicationContext(), "D100", Toast.LENGTH_LONG).show();
                     dieTypeValue = 100;
                 }
             }
